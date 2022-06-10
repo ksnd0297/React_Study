@@ -1,5 +1,7 @@
-import CounterContainer from "./containers/CounterContainer";
-import TodosContainer from "./containers/TodosContainer";
+import React from 'react';
+
+import CounterContainer from './containers/CounterContainer';
+import TodosContainer from './containers/TodosContainer';
 
 function App() {
   return (
@@ -11,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default React.memo(App);

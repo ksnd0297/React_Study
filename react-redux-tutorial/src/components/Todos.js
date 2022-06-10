@@ -1,3 +1,5 @@
+import React from 'react';
+
 const TodoItem = ({ todo, onToggle, onRemove }) => {
   return (
     <div>
@@ -7,7 +9,7 @@ const TodoItem = ({ todo, onToggle, onRemove }) => {
         checked={todo.done}
         readOnly={true}
       />
-      <span style={{ textDecoration: todo.done ? "line-through" : "none" }}>
+      <span style={{ textDecoration: todo.done ? 'line-through' : 'none' }}>
         {todo.text}
       </span>
       <button onClick={() => onRemove(todo.id)}>삭제</button>
@@ -26,8 +28,9 @@ const Todos = ({
   const onSubmit = (e) => {
     e.preventDefault();
     onInsert(input);
-    onChangeInput("");
+    onChangeInput('');
   };
+
   const onChange = (e) => onChangeInput(e.target.value);
 
   return (
@@ -50,4 +53,4 @@ const Todos = ({
   );
 };
 
-export default Todos;
+export default React.memo(Todos);

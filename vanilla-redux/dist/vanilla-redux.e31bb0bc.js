@@ -925,6 +925,7 @@ function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
+  // action.type에 따라 다른 작업을 처리함
   switch (action.type) {
     case TOGGLE_SWITCH:
       return _objectSpread(_objectSpread({}, state), {}, {
@@ -949,14 +950,14 @@ function reducer() {
 var store = (0, _redux.createStore)(reducer);
 
 var render = function render() {
-  var state = store.getState();
+  var state = store.getState(); // 현재 상태를 불러옵니다.
+  //토글 처리
 
   if (state.toggle) {
     divToggle.classList.add("active");
   } else {
     divToggle.classList.remove("active");
-  } //  카운터 처리
-
+  }
 
   counter.innerText = state.counter;
 };
@@ -1003,7 +1004,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59871" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52857" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -20,6 +20,7 @@ const initialState = {
 
 // state가 undefined일 때는 initialState를 기본값으로 사용
 function reducer(state = initialState, action) {
+  // action.type에 따라 다른 작업을 처리함
   switch (action.type) {
     case TOGGLE_SWITCH:
       return {
@@ -44,14 +45,14 @@ function reducer(state = initialState, action) {
 const store = createStore(reducer);
 
 const render = () => {
-  const state = store.getState();
+  const state = store.getState(); // 현재 상태를 불러옵니다.
+  //토글 처리
   if (state.toggle) {
     divToggle.classList.add("active");
   } else {
     divToggle.classList.remove("active");
   }
 
-  //  카운터 처리
   counter.innerText = state.counter;
 };
 

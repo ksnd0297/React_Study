@@ -1,5 +1,5 @@
 .toggle {
-  border: 2px solid black;
+  border : 2px solid black;
   width: 64px;
   height: 64px;
   border-radius: 32px;
@@ -7,7 +7,7 @@
 }
 
 .toggle.active {
-  background-color: yellow;
+  background: yellow;
 }
 
 /*# sourceMappingURL=/vanilla-redux.9ad09f98.css.map */
